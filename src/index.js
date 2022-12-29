@@ -37,7 +37,7 @@ function sk(){
 }
 
 const fireworks = new Fireworks(app);
-for(var i = 0; i < 250; ++i){new Star(app);}
+//for(var i = 0; i < 250; ++i){new Star(app);}
 const param = new URLSearchParams(window.location.search);
 var year;
 
@@ -58,6 +58,6 @@ if((Date.now() >= target)){setInterval(function() {fireworks.launch(2)}, 500);}
 setInterval(st,1000);
 setInterval(sk,60000);
 
-//app.addEventListener("mousedown", function() {fireworks.launch()});
-app.addEventListener("touchstart", function() {fireworks.launch()});
+app.addEventListener("mousedown", function() {fireworks.launch()});
+//app.addEventListener("touchstart", function() {fireworks.launch()});
 //aa
