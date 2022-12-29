@@ -52,5 +52,5 @@ if((Date.now() >= target)){setInterval(function() {fireworks.launch(2)}, 500);}
 setInterval(st,1000);
 
 app.addEventListener("mousedown", function() {fireworks.launch()});
-app.addEventListener("touchstart", function() {fireworks.launch()});
+//app.addEventListener("touchstart", function() {fireworks.launch()});
 
