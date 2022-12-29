@@ -10,8 +10,8 @@ const tT = document.querySelector('#tT');
 const tY = document.querySelector('#tY');
 
 function st(){
-    var current = new Date;
-    var delta = target.getTime() - current.getTime();
+    const current = new Date();
+    const delta = target.getTime() - current.getTime();
     
     if(delta >= 0){
         tT.innerHTML = 'Time Relative to';
@@ -21,9 +21,13 @@ function st(){
     delta = Math.abs(delta);
     
     dS.innerHTML = Math.floor((delta / (1000)) % 60);
-    dM.innerHTML = Math.floor((delta / (60 * 1000)) % 60);
-    dH.innerHTML = Math.floor((delta / (60 * 60 * 1000)) % 24);
-    dD.innerHTML = Math.floor((delta / (24 * 60 * 60 * 1000)));
+    dM.innerHTML = Math.floor((delta / (60000)) % 60);
+    dH.innerHTML = Math.floor((delta / (3600000)) % 24);
+    dD.innerHTML = Math.floor((delta / (86400000)));
+}
+
+function sk(){
+    const current = new Date();
     
     var gauss = Math.exp(-(Math.pow(((current.getHours() * 60 + current.getMinutes()) - 720), 2) / (2 * Math.pow((60 * Math.PI), 2))));
     var txc = Math.floor(255 - 255 * gauss);
@@ -44,12 +48,14 @@ if(param.has('y')){
 
 const target = new Date(year + "-01-01T00:00:00");
 st();
+sk();
 tY.innerHTML = year;
 document.title = year + '年の花火 | 0x52525A';
 
 if((Date.now() >= target)){setInterval(function() {fireworks.launch(2)}, 500);}
 
 setInterval(st,1000);
+setInterval(sk,60000);
 
 app.addEventListener("mousedown", function() {fireworks.launch()});
 //app.addEventListener("touchstart", function() {fireworks.launch()});
