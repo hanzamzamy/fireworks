@@ -18,8 +18,8 @@
 }
 
 .star {
-    width: 5px;
-    height: 5px;
+    width: 3px;
+    height: 3px;
     position: fixed;
     background: #ffffff;
     z-index: 0;
