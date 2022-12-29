@@ -11,7 +11,7 @@ const tY = document.querySelector('#tY');
 
 function st(){
     const current = new Date();
-    const delta = target.getTime() - current.getTime();
+    var delta = target.getTime() - current.getTime();
     
     if(delta >= 0){
         tT.innerHTML = 'Time Relative to';
