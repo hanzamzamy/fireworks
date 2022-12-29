@@ -18,6 +18,7 @@ function st(){
     }else{
         tT.innerHTML = 'Time Elapsed in';
     }
+    
     delta = Math.abs(delta);
     
     dS.innerHTML = Math.floor((delta / (1000)) % 60);
