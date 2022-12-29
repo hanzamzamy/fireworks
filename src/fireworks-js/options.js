@@ -49,7 +49,7 @@ export class Options {
             max: 0.03
         };
         this.sound = {
-            enabled: true,
+            enabled: false,
             files: [
                 'src/explosion0.mp3',
                 'src/explosion1.mp3',
