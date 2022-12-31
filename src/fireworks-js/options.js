@@ -56,8 +56,8 @@ export class Options {
                 'src/explosion2.mp3'
             ],
             volume: {
-                min: 5000,
-                max: 10000
+                min: 100,
+                max: 300
             }
         };
         this.boundaries = {
