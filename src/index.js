@@ -5,5 +5,7 @@ const param = new URLSearchParams(window.location.search);
 
 if(param.has('s')){for(var i = 0; i < param.get('s'); ++i){new Star(app);}}
 
+setInterval(function() {fireworks.launch()}, 750);
+
 app.addEventListener("mousedown", function() {fireworks.launch()});
 app.addEventListener("touchstart", function() {fireworks.launch()});
